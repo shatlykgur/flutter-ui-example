@@ -65,11 +65,18 @@ class HomePage extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
             ),
             SizedBox(height: 10),
-            GridView.count(
-              crossAxisCount: 2,
-              children: [
-                
-              ],
+            SizedBox(
+              height: 300,
+              child: GridView.count(
+                padding: EdgeInsets.zero,
+                crossAxisCount: 2,
+                childAspectRatio: 1.491,
+                physics: NeverScrollableScrollPhysics(),
+                children: [
+                  for (var country in countries)
+                  Image.asset('assets/images/$country.png')
+                ],
+              ),
             ),
           ],
         ),
@@ -77,3 +84,5 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+final countries = ['japan', 'barcelona', 'greece', 'rome'];
