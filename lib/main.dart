@@ -43,11 +43,33 @@ class HomePage extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: "\nShatlyk",
-                    style: TextStyle(fontWeight: FontWeight.normal)
+                    style: TextStyle(fontWeight: FontWeight.normal),
                   ),
                 ],
               ),
               style: TextStyle(fontSize: 50),
+            ),
+            SizedBox(height: 30),
+            TextField(
+              decoration: InputDecoration(
+                prefix: Icon(Icons.search, size: 18),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                hintText: "Search",
+              ),
+            ),
+            SizedBox(height: 80),
+            Text(
+              "Saved Places",
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+            ),
+            SizedBox(height: 10),
+            GridView.count(
+              crossAxisCount: 2,
+              children: [
+                
+              ],
             ),
           ],
         ),
